@@ -1,0 +1,1 @@
+A static Hexo blog for the UWC CWC (United World College, Changshu China) Zhixing Flowers for Algernon, which aims to increase awareness around neurodivergence (autism , in particular) and support families and neurodivergent individuals.
