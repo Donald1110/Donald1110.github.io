@@ -1,0 +1,32 @@
+mixin articleSort(posts)
+  .article-sort
+    if page.tag
+      .article-sort-intro
+        case page.tag 
+          when "Activity Records"
+            p.no-style Hear about experiences and insights from each of FFA's sessions! This serves as a good overview of the running of the session and coverage of the objectives we aim to achieve with each session. We also include small moments of interaction that we find important to us.
+          when "Diaries"
+            p.no-style A part of the essence of Flowers for Algernon is a constant reflection on our views and actions. This leads to creative solutions and relevant adaptations to the communities we engage with. This page contains the collective diary of the amazing people who make up Flowers for Algernon.
+            p.no-style These may be small moments of interaction that an FFA member finds important to them, a reflection of something that should've been done differently, important conversations, or a moment of realization that pushes a new approach.
+
+    - let year
+    - posts.forEach(article => {
+      - const tempYear = date(article.date, 'YYYY')
+      - const noCoverClass = article.cover === false || !theme.cover.archives_enable ? 'no-article-cover' : ''
+      - const title = article.title || _p('no_title')
+      if tempYear !== year
+        - year = tempYear
+        .article-sort-item.year= year
+      .article-sort-item(class=noCoverClass)
+        if article.cover && theme.cover.archives_enable
+          a.article-sort-item-img(href=url_for(article.path) title=title)
+            if article.cover_type === 'img'
+              img(src=url_for(article.cover) alt=title onerror=`this.onerror=null;this.src='${url_for(theme.error_img.post_page)}'`)
+            else
+              div(style=`background: ${article.cover}`)
+        .article-sort-item-info
+          .article-sort-item-time
+            i.far.fa-calendar-alt
+            time.post-meta-date-created(datetime=date_xml(article.date) title=_p('post.created') + ' ' + full_date(article.date))= date(article.date, config.date_format)
+          a.article-sort-item-title(href=url_for(article.path) title=title)= title
+    - })
