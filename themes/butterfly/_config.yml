@@ -33,6 +33,7 @@ menu:
   Upload Guides:
     Hexo: /guides/hexo/
     Markdown: /guides/markdown/
+    Online Collaboration: /guides/collab/
     Deploying to GitHub: /guides/deploy/
     
 
