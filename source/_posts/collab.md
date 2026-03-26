@@ -13,10 +13,11 @@ You can collaborate with the source files shared on GitHub. Remember to create a
 # Folder Layout
 The project layout is as following:
 
+```
 Project/
 └── FFA-Source-Files/
     ├── source/
-        ├── <strong>_posts/</strong>
+        ├── _posts/
             ├── activity-guide.md
             ├── charity-market.md
             ├── ...
@@ -39,19 +40,20 @@ Project/
             ├── LICENSE
             ├── README.md
             ├── README_CN.md
-            ├── <strong>_config.yml</strong>
+            ├── _config.yml
             ├── package.json
             └── plugins.yml
         └── .gitkeep
     ├── .gitignore
     ├── _config.landscape.yml
-    ├── <strong>_config.yml</strong>
+    ├── _config.yml
     ├── package-lock.json
     └── package.json
+```
 
 Files and folders with a preceding dot will not appear when you clone or extract the zip when you download this repo. If you need to use them (for whatever reason), press ⇧⌘. to reveal them as hidden files/folders.
 
-Embolded items are extremely important and will be used very often.
+The _posts/ folder and the two _config.yml files are of importance.
 
 The _config.yml files are briefly explained in the Markdown tab. Visit the documentation provided on that page to learn more about Hexo and Butterfly's configurations.
 
