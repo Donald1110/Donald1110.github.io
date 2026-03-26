@@ -13,7 +13,6 @@ You can collaborate with the source files shared on GitHub. Remember to create a
 # Folder Layout
 The project layout is as following:
 
-```
 Project/
 └── FFA-Source-Files/
     ├── source/
@@ -49,7 +48,6 @@ Project/
     ├── <strong>_config.yml</strong>
     ├── package-lock.json
     └── package.json
-```
 
 Files and folders with a preceding dot will not appear when you clone or extract the zip when you download this repo. If you need to use them (for whatever reason), press ⇧⌘. to reveal them as hidden files/folders.
 
